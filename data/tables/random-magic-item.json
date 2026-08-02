@@ -1,0 +1,155 @@
+[
+  {
+    "id": "random_item_type",
+    "category": "all",
+    "title": "Item mágico aleatório — tipo",
+    "role": "random-type",
+    "die": "d6",
+    "columns": [
+      "Item",
+      "Página"
+    ],
+    "rows": [
+      {
+        "roll": "1",
+        "values": [
+          "Armaduras",
+          "Pág. 290"
+        ]
+      },
+      {
+        "roll": "2",
+        "values": [
+          "Armas",
+          "Pág. 292"
+        ]
+      },
+      {
+        "roll": "3",
+        "values": [
+          "Pergaminhos",
+          "Pág. 294"
+        ]
+      },
+      {
+        "roll": "4",
+        "values": [
+          "Poções",
+          "Pág. 296"
+        ]
+      },
+      {
+        "roll": "5",
+        "values": [
+          "Utilitários",
+          "Pág. 298"
+        ]
+      },
+      {
+        "roll": "6",
+        "values": [
+          "Varinhas",
+          "Pág. 294"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "magic_feature_counts",
+    "category": "all",
+    "title": "Características — quantidade de benefícios/maldições",
+    "role": "feature-counts",
+    "die": "2d6",
+    "columns": [
+      "Benefício",
+      "Maldição"
+    ],
+    "rows": [
+      {
+        "roll": "2–3",
+        "values": [
+          "—",
+          "1"
+        ],
+        "benefits": 0,
+        "curses": 1
+      },
+      {
+        "roll": "4–7",
+        "values": [
+          "1",
+          "1"
+        ],
+        "benefits": 1,
+        "curses": 1
+      },
+      {
+        "roll": "8–11",
+        "values": [
+          "1",
+          "—"
+        ],
+        "benefits": 1,
+        "curses": 0
+      },
+      {
+        "roll": "12",
+        "values": [
+          "2",
+          "—"
+        ],
+        "benefits": 2,
+        "curses": 0
+      }
+    ]
+  },
+  {
+    "id": "magic_personality_counts",
+    "category": "all",
+    "title": "Personalidade — quantidade de virtudes/defeitos",
+    "role": "personality-counts",
+    "die": "2d6",
+    "columns": [
+      "Virtude",
+      "Defeito"
+    ],
+    "rows": [
+      {
+        "roll": "2–3",
+        "values": [
+          "—",
+          "1"
+        ],
+        "virtues": 0,
+        "flaws": 1
+      },
+      {
+        "roll": "4–9",
+        "values": [
+          "—",
+          "—"
+        ],
+        "virtues": 0,
+        "flaws": 0
+      },
+      {
+        "roll": "10–11",
+        "values": [
+          "1",
+          "1"
+        ],
+        "virtues": 1,
+        "flaws": 1
+      },
+      {
+        "roll": "12",
+        "values": [
+          "1",
+          "—"
+        ],
+        "virtues": 1,
+        "flaws": 0
+      }
+    ]
+  }
+]

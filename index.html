@@ -1,10 +1,643 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+  <title>Shadowdark — Construtor de Itens Mágicos</title>
+  <link rel="stylesheet" href="styles.css?v=31" />
+</head>
 <body>
+  <header class="hero">
+    <div>
+      <p class="eyebrow">Shadowdark / OSR</p>
+      <h1>Construtor de Itens Mágicos</h1>
+      <p class="subtitle">
+        Gere JSON para armas, armaduras, pergaminhos, varinhas, poções e utilitários. As tabelas ficam em arquivos JSON separados para facilitar expansão.
+      </p>
+    </div>
+    <div class="hero-card">
+      <span class="stat-label">Itens criados</span>
+      <strong id="itemCount">0</strong>
+      <span class="stat-label">Aba ativa</span>
+      <strong id="activeTypeLabel">—</strong>
+      <span class="stat-label">Versão</span>
+      <strong>v31</strong>
+    </div>
+  </header>
 
-<h1>My First Heading</h1>
+  <main class="app">
+    <section class="panel tools-panel">
+      <div class="tools-panel-text">
+        <p class="eyebrow">Ferramentas de cartas</p>
+        <h2>Cartas e impressão</h2>
+      </div>
+      <div class="tools-panel-actions">
+        <button class="app-button primary" id="openCardBuilderBtn" type="button">Abrir criador de cartas</button>
+        <button class="app-button secondary-button" id="openPrintPageBtn" type="button">Página de impressão</button>
+      </div>
+    </section>
+    <section class="panel standard-cards-panel">
+      <div class="standard-cards-text">
+        <p class="eyebrow">Itens básicos v31</p>
+        <h2>Criar armas, armaduras e equipamentos básicos</h2>
+        <p>
+          Cria automaticamente o pacote de itens básicos: armas, armaduras e equipamentos padrão.
+        </p>
+      </div>
+      <div class="tools-panel-actions">
+        <button class="app-button primary" id="createStandardCardsBtn" type="button">Criar itens básicos</button>
+        <button class="app-button secondary-button" id="createStandardAndPrintBtn" type="button">Criar básicos e selecionar para impressão</button>
+      </div>
+    </section>
 
-<p>My first paragraph.</p>
+    <nav class="workspace-tabs" aria-label="Áreas do projeto">
+      <button class="workspace-tab active" type="button" data-workspace-tab="editor">Editor</button>
+      <button class="workspace-tab" type="button" data-workspace-tab="items">Itens</button>
+      <button class="workspace-tab" type="button" data-workspace-tab="consult">Consulta</button>
+      <button class="workspace-tab" type="button" data-workspace-tab="export">Exportação</button>
+    </nav>
 
+    <nav class="tabs item-type-tabs" id="typeTabs" aria-label="Tipos de item"></nav>
+
+    <section class="grid workspace-grid">
+      <details class="panel editor-panel collapsible workspace-pane is-workspace-active" data-workspace-pane="editor" open>
+        <summary class="collapsible-summary">
+          <span>
+            <span class="eyebrow">Editor</span>
+            <span class="summary-title" id="formTitle">Novo item</span>
+          </span>
+          <span class="chevron">▾</span>
+        </summary>
+
+        <div class="panel-body">
+          <form id="itemForm">
+            <input type="hidden" id="editingId" />
+
+            <div class="field-grid">
+              <label>
+                Nome do item
+                <input id="name" required placeholder="Ex.: Espada longa da Lua Partida" />
+              </label>
+
+              <label>
+                Tipo/Subtipo
+                <select id="subtype"></select>
+              </label>
+
+              <label class="field-cost">
+                Custo/valor
+                <input id="cost" placeholder="Ex.: 400 PO ou —" />
+              </label>
+
+              <label class="field-bonus">
+                Bônus
+                <select id="bonus"></select>
+              </label>
+
+              <label class="weapon-only">
+                Tipo da arma
+                <select id="weaponAttackType">
+                  <option value="">—</option>
+                  <option value="C">Corpo a corpo (C)</option>
+                  <option value="D">Distância (D)</option>
+                  <option value="C/D">Corpo a corpo / Distância (C/D)</option>
+                  <option value="-">Especial / não aplicável</option>
+                </select>
+              </label>
+
+              <label class="weapon-only">
+                Alcance
+                <select id="range">
+                  <option value="">—</option>
+                  <option value="A">Adjacente (A)</option>
+                  <option value="P">Perto (P)</option>
+                  <option value="L">Longe (L)</option>
+                  <option value="A/P">Adjacente / Perto (A/P)</option>
+                  <option value="A/L">Adjacente / Longe (A/L)</option>
+                  <option value="2x A">2x Adjacente</option>
+                  <option value="-">Especial / não aplicável</option>
+                </select>
+              </label>
+
+              <label class="weapon-only">
+                Dano
+                <input id="damage" placeholder="Ex.: 1d8 ou 1d8/1d10" />
+              </label>
+
+              <label>
+                Espaços / qtd. por espaço
+                <input id="slots" placeholder="Ex.: 1, 1-20, 100 ou 1 (a primeira não usa espaço)" />
+              </label>
+
+              <label class="armor-only">
+                CA da armadura
+                <input id="armorClass" placeholder="Ex.: 11 + MOD DES, 15 ou +2" />
+              </label>
+            </div>
+
+            <section class="box" id="propertiesBox" hidden>
+              <div class="box-head">
+                <h3>Propriedades do item</h3>
+                <span>Siglas e efeitos disponíveis para esta aba.</span>
+              </div>
+              <div id="propertyChecks" class="check-grid"></div>
+              <div id="propertyGlossary" class="glossary"></div>
+            </section>
+
+            <details class="box magic-box collapsible-inner" open>
+              <summary class="magic-summary-bar">
+                <span>
+                  <strong>Campos mágicos</strong>
+                  <small>Características, benefícios, maldições, personalidade e magias.</small>
+                </span>
+                <span class="chevron">▾</span>
+              </summary>
+
+              <div class="magic-body">
+                <div class="magic-main-actions">
+                  <button class="secondary" id="rollItemBtn" type="button">Rolar item mágico completo</button>
+                  <button class="ghost" id="clearMagicAllBtn" type="button">Limpar campos mágicos</button>
+                  <small>Rolar item mágico completo substitui subtipo, bônus e os campos mágicos atuais.</small>
+                </div>
+
+                <div class="magic-grid-group tone-a">
+                  <div class="group-title">
+                    <strong>Características</strong>
+                    <span>Aparência, material, detalhe estranho ou origem visual.</span>
+                  </div>
+                  <div class="group-actions">
+                    <button class="secondary small" data-random="characteristics" type="button">Rolar característica</button>
+                    <button class="ghost small" data-clear-list="characteristics" type="button">Limpar características</button>
+                  </div>
+                  <div class="add-row">
+                    <select id="characteristicSelect"></select>
+                    <button class="secondary" id="addCharacteristicBtn" type="button">Adicionar característica</button>
+                  </div>
+                  <div class="list-field">
+                    <label>Características do item</label>
+                    <div id="characteristicsList" class="dynamic-list"></div>
+                    <button class="ghost small" data-add-list="characteristics" type="button">+ característica custom</button>
+                  </div>
+                </div>
+
+                <div class="magic-grid-group tone-b">
+                  <div class="group-title">
+                    <strong>Benefícios</strong>
+                    <span>Poderes positivos. Pode adicionar quantos quiser.</span>
+                  </div>
+                  <div class="group-actions">
+                    <button class="secondary small" data-random="benefits" type="button">Rolar benefício</button>
+                    <button class="ghost small" data-clear-list="benefits" type="button">Limpar benefícios</button>
+                  </div>
+                  <div class="add-row">
+                    <select id="benefitSelect"></select>
+                    <button class="secondary" id="addBenefitBtn" type="button">Adicionar benefício</button>
+                  </div>
+                  <div class="list-field">
+                    <label>Benefícios do item</label>
+                    <div id="benefitsList" class="dynamic-list"></div>
+                    <button class="ghost small" data-add-list="benefits" type="button">+ benefício custom</button>
+                  </div>
+                </div>
+
+                <div class="magic-grid-group tone-a">
+                  <div class="group-title">
+                    <strong>Maldições</strong>
+                    <span>Efeitos negativos. Pode adicionar quantas quiser.</span>
+                  </div>
+                  <div class="group-actions">
+                    <button class="secondary small" data-random="curses" type="button">Rolar maldição</button>
+                    <button class="ghost small" data-clear-list="curses" type="button">Limpar maldições</button>
+                  </div>
+                  <div class="add-row">
+                    <select id="curseSelect"></select>
+                    <button class="secondary" id="addCurseBtn" type="button">Adicionar maldição</button>
+                  </div>
+                  <div class="list-field">
+                    <label>Maldições do item</label>
+                    <div id="cursesList" class="dynamic-list"></div>
+                    <button class="ghost small" data-add-list="curses" type="button">+ maldição custom</button>
+                  </div>
+                </div>
+
+                <div class="magic-grid-group tone-b personality-zone">
+                  <div class="group-title">
+                    <strong>Personalidade do item</strong>
+                    <span>Use quando o item for consciente ou tiver vontade própria.</span>
+                  </div>
+                  <div class="group-actions">
+                    <button class="secondary small" data-random="personality" type="button">Rolar personalidade</button>
+                    <button class="ghost small" data-clear-personality type="button">Limpar personalidade</button>
+                  </div>
+
+                  <div class="field-grid">
+                    <label>
+                      Alinhamento do item
+                      <select id="alignment">
+                        <option value="">—</option>
+                        <option value="Ordeiro">Ordeiro</option>
+                        <option value="Neutro">Neutro</option>
+                        <option value="Caótico">Caótico</option>
+                      </select>
+                    </label>
+
+                    <label>
+                      Item consciente?
+                      <select id="sentient">
+                        <option value="false">Não</option>
+                        <option value="true">Sim</option>
+                      </select>
+                    </label>
+                  </div>
+
+                  <div class="personality-grid">
+                    <div class="personality-card">
+                      <div class="group-title mini">
+                        <strong>Virtudes</strong>
+                        <span>O que o item tenta fazer de útil.</span>
+                      </div>
+                      <div class="group-actions">
+                        <button class="secondary small" data-random="virtues" type="button">Rolar virtude</button>
+                        <button class="ghost small" data-clear-list="virtues" type="button">Limpar virtudes</button>
+                      </div>
+                      <div class="add-row">
+                        <select id="virtueSelect"></select>
+                        <button class="secondary" id="addVirtueBtn" type="button">Adicionar</button>
+                      </div>
+                      <div id="virtuesList" class="dynamic-list"></div>
+                      <button class="ghost small" data-add-list="virtues" type="button">+ virtude custom</button>
+                    </div>
+
+                    <div class="personality-card">
+                      <div class="group-title mini">
+                        <strong>Defeitos</strong>
+                        <span>Manias, medos, exigências e problemas.</span>
+                      </div>
+                      <div class="group-actions">
+                        <button class="secondary small" data-random="flaws" type="button">Rolar defeito</button>
+                        <button class="ghost small" data-clear-list="flaws" type="button">Limpar defeitos</button>
+                      </div>
+                      <div class="add-row">
+                        <select id="flawSelect"></select>
+                        <button class="secondary" id="addFlawBtn" type="button">Adicionar</button>
+                      </div>
+                      <div id="flawsList" class="dynamic-list"></div>
+                      <button class="ghost small" data-add-list="flaws" type="button">+ defeito custom</button>
+                    </div>
+
+                    <div class="personality-card">
+                      <div class="group-title mini">
+                        <strong>Traços</strong>
+                        <span>Tom geral da personalidade.</span>
+                      </div>
+                      <div class="group-actions">
+                        <button class="secondary small" data-random="traits" type="button">Rolar traço</button>
+                        <button class="ghost small" data-clear-list="traits" type="button">Limpar traços</button>
+                      </div>
+                      <div class="add-row">
+                        <select id="traitSelect"></select>
+                        <button class="secondary" id="addTraitBtn" type="button">Adicionar</button>
+                      </div>
+                      <div id="traitsList" class="dynamic-list"></div>
+                      <button class="ghost small" data-add-list="traits" type="button">+ traço custom</button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="magic-grid-group tone-a spell-area" id="spellArea">
+                  <div class="group-title">
+                    <strong>Magias referenciadas</strong>
+                    <span>Para pergaminhos e varinhas. Apenas referência, sem descrição da magia.</span>
+                  </div>
+                  <div class="group-actions">
+                    <button class="secondary small" data-random="spells" type="button">Rolar magia</button>
+                    <button class="ghost small" data-clear-spells type="button">Limpar magia/grau</button>
+                  </div>
+                  <div class="field-grid">
+                    <label>
+                      Grau da magia
+                      <select id="spellTier"></select>
+                    </label>
+                  </div>
+                  <div class="add-row">
+                    <select id="spellSelect"></select>
+                    <button class="secondary" id="addSpellBtn" type="button">Adicionar magia</button>
+                  </div>
+                  <div class="list-field">
+                    <label>Magias</label>
+                    <div id="spellsList" class="dynamic-list"></div>
+                    <button class="ghost small" data-add-list="spells" type="button">+ magia custom</button>
+                  </div>
+                </div>
+              </div>
+            </details>
+
+            <label class="notes-field">
+              Observações
+              <textarea id="notes" rows="5" placeholder="Origem, condição de ativação, efeito customizado, facção ligada, etc."></textarea>
+            </label>
+
+            <label class="tags-field">
+              Tags
+              <input id="tags" placeholder="Ex.: raro, Brah’Tokr, amaldiçoado" />
+              <small>Separe por vírgulas.</small>
+            </label>
+
+            <div class="actions editor-submit-actions">
+              <button id="saveBtn" type="submit">Adicionar item</button>
+              <button class="secondary" id="duplicateBtn" type="button">Duplicar selecionado</button>
+              <button class="ghost" id="resetFormBtn" type="button">Limpar</button>
+            </div>
+          </form>
+        </div>
+      </details>
+
+      <details class="panel list-panel collapsible workspace-pane" data-workspace-pane="items" open>
+        <summary class="collapsible-summary">
+          <span>
+            <span class="eyebrow">Itens</span>
+            <span class="summary-title">Itens cadastrados</span>
+          </span>
+          <span class="chevron">▾</span>
+        </summary>
+        <div class="panel-body">
+          <section class="advanced-filter-panel compact-filter-panel filter-shell-v27">
+            <div class="filter-toolbar-v27">
+              <label class="compact-search-label filter-search-v27">
+                Buscar
+                <input id="search" type="search" placeholder="Nome do item..." />
+              </label>
+
+              <div class="filter-combine-inline" role="group" aria-label="Combinar filtros">
+                <span>Combinar</span>
+                <label>
+                  <input id="filterModeAnd" name="filterCombineMode" type="radio" value="AND" checked />
+                  <strong>AND</strong>
+                </label>
+                <label>
+                  <input id="filterModeOr" name="filterCombineMode" type="radio" value="OR" />
+                  <strong>OR</strong>
+                </label>
+              </div>
+
+              <button class="app-button primary" id="openFiltersBtn" type="button">Filtros</button>
+              <button class="ghost small" id="clearFiltersBtn" type="button">Limpar</button>
+            </div>
+
+            <div class="active-filter-bar">
+              <span id="filterStatus">Sem filtro ativo</span>
+              <div id="activeFilterChips" class="active-filter-chips"></div>
+            </div>
+          </section>
+
+          <div class="filter-modal" id="filterModal" hidden>
+            <div class="filter-modal-backdrop" data-close-filters></div>
+
+            <section class="filter-modal-card" role="dialog" aria-modal="true" aria-labelledby="filterModalTitle">
+              <div class="filter-modal-header">
+                <div>
+                  <p class="eyebrow">Filtros</p>
+                  <h3 id="filterModalTitle">Filtrar itens cadastrados</h3>
+                </div>
+                <button class="ghost small" id="closeFiltersBtn" type="button">Fechar</button>
+              </div>
+
+              <div class="filter-builder-head">
+                <p class="filter-modal-hint">
+                  Monte filtros como no 5eTools: use vários campos e escolha se eles precisam combinar em AND ou OR.
+                </p>
+
+                <div class="filter-mode-card">
+                  <span>Campos ativos</span>
+                  <label>
+                    <input name="filterCombineMode" type="radio" value="AND" checked />
+                    <strong>AND</strong>
+                    <small>todos precisam bater</small>
+                  </label>
+                  <label>
+                    <input name="filterCombineMode" type="radio" value="OR" />
+                    <strong>OR</strong>
+                    <small>qualquer um pode bater</small>
+                  </label>
+                </div>
+              </div>
+
+              <div class="filter-grid">
+                <label>
+                  Tipo de item
+                  <select id="typeFilter">
+                    <option value="">Todos os tipos</option>
+                  </select>
+                </label>
+
+                <label>
+                  Subtipo
+                  <input id="subtypeFilter" type="search" placeholder="Ex.: espada longa, couro, varinha" />
+                </label>
+
+                <label>
+                  Incluir TAGS
+                  <input id="includeTagsFilter" placeholder="Ex.: RARO, BRAH’TOKR" />
+                  <small>Separe por vírgula. Acentos são ignorados.</small>
+                </label>
+
+                <label>
+                  Modo das TAGS incluídas
+                  <select id="tagCombineMode">
+                    <option value="ALL">Todas as TAGS</option>
+                    <option value="ANY">Qualquer TAG</option>
+                  </select>
+                  <small>Controla apenas o campo Incluir TAGS.</small>
+                </label>
+
+                <label>
+                  Excluir TAGS
+                  <input id="excludeTagsFilter" placeholder="Ex.: TESTE, COMUM" />
+                  <small>Remove itens com qualquer uma dessas TAGS.</small>
+                </label>
+
+                <label>
+                  Propriedades
+                  <input id="propertyFilter" placeholder="Ex.: AC, AR, RU" />
+                  <small>Separe por vírgula. Em AND exige todas; em OR aceita qualquer uma.</small>
+                </label>
+
+                <label>
+                  Bônus
+                  <select id="bonusFilter">
+                    <option value="">Qualquer bônus</option>
+                    <option value="+0">+0</option>
+                    <option value="+1">+1</option>
+                    <option value="+2">+2</option>
+                    <option value="+3">+3</option>
+                    <option value="SEM_BONUS">Sem bônus</option>
+                  </select>
+                </label>
+
+                <label>
+                  Criado de
+                  <input id="createdFromFilter" type="date" />
+                </label>
+
+                <label>
+                  Criado até
+                  <input id="createdToFilter" type="date" />
+                </label>
+
+                <label>
+                  Texto mágico
+                  <input id="magicTextFilter" type="search" placeholder="Benefício, maldição, virtude, magia..." />
+                </label>
+
+                <label>
+                  Ordenar por
+                  <select id="sortBy">
+                    <option value="createdAt">Ordem de criação</option>
+                    <option value="name">Nome</option>
+                    <option value="itemType">Tipo</option>
+                    <option value="updatedAt">Última edição</option>
+                  </select>
+                </label>
+              </div>
+
+              <div class="filter-modal-actions">
+                <button class="ghost" id="clearFiltersBtnModal" type="button">Limpar filtros</button>
+                <button class="app-button primary" id="applyFiltersBtn" type="button">Aplicar filtros</button>
+              </div>
+            </section>
+          </div>
+
+          <div class="bulk-card-actions compact-bulk-actions">
+            <div class="bulk-group">
+              <button class="ghost small" id="selectVisibleCardsBtn" type="button">Selecionar visíveis</button>
+              <button class="ghost small" id="deselectVisibleCardsBtn" type="button">Desselecionar visíveis</button>
+              <button class="ghost small" id="invertVisibleCardsBtn" type="button">Inverter visíveis</button>
+              <button class="ghost small" id="clearSelectedCardsBtn" type="button">Limpar seleção</button>
+            </div>
+
+            <div class="bulk-group active-type-bulk-group">
+              <button class="secondary small" id="selectActiveTypeCardsBtn" type="button">Selecionar aba atual</button>
+              <button class="ghost small" id="deselectActiveTypeCardsBtn" type="button">Desselecionar aba atual</button>
+            </div>
+
+            <div class="bulk-group type-bulk-group">
+              <select id="bulkTypeSelect" aria-label="Selecionar grupo por tipo">
+                <option value="">Tipo de item...</option>
+              </select>
+              <button class="secondary small" id="selectTypeCardsBtn" type="button">Selecionar tipo</button>
+              <button class="ghost small" id="deselectTypeCardsBtn" type="button">Desselecionar tipo</button>
+            </div>
+
+            <div class="bulk-print-group">
+              <span id="selectedCardsCount">0 selecionados</span>
+              <button class="app-button primary small" id="openPrintSelectedBtn" type="button">Montar página de impressão</button>
+            </div>
+          </div>
+
+          <div class="items-table-wrap compact-items-wrap">
+            <table class="items-compact-table">
+              <thead>
+                <tr>
+                  <th class="select-col">
+                    <label class="table-check-label" title="Selecionar ou desselecionar todos os itens visíveis">
+                      <input id="toggleVisibleSelection" type="checkbox" />
+                      <span>Sel.</span>
+                    </label>
+                  </th>
+                  <th>Nome</th>
+                  <th>Tipo</th>
+                  <th>Dados</th>
+                  <th>Tags</th>
+                  <th>Txt.</th>
+                  <th>Ações</th>
+                </tr>
+              </thead>
+              <tbody id="itemsBody"></tbody>
+            </table>
+          </div>
+          <p id="emptyState" class="empty">Nenhum item criado ainda.</p>
+        </div>
+      </details>
+
+      <details class="panel consult-panel collapsible workspace-pane" data-workspace-pane="consult" open>
+        <summary class="collapsible-summary">
+          <span>
+            <span class="eyebrow">Consulta</span>
+            <span class="summary-title" id="consultTitle">Tabelas da aba</span>
+          </span>
+          <span class="chevron">▾</span>
+        </summary>
+        <div class="panel-body">
+          <p class="hint">
+            Estas tabelas são lidas dos arquivos em <code>data/tables</code>. Para expandir o conteúdo, adicione novas linhas ou novos arquivos no manifesto.
+          </p>
+          <div id="consultTables" class="consult-grid"></div>
+        </div>
+      </details>
+
+      <details class="panel export-panel collapsible workspace-pane" data-workspace-pane="export" open>
+        <summary class="collapsible-summary">
+          <span>
+            <span class="eyebrow">Exportação</span>
+            <span class="summary-title">JSON / Importação</span>
+          </span>
+          <span class="chevron">▾</span>
+        </summary>
+        <div class="panel-body">
+          <div class="actions compact">
+            <button class="secondary" id="copyJsonBtn" type="button">Copiar</button>
+            <button class="secondary" id="downloadJsonBtn" type="button">Baixar .json</button>
+          </div>
+
+          <textarea id="jsonOutput" spellcheck="false"></textarea>
+
+          <details class="import-box">
+            <summary>Importar JSON</summary>
+
+            <label class="file-import">
+              Selecionar arquivo .json
+              <input id="jsonFileInput" type="file" accept="application/json,.json" />
+              <small>Ao selecionar um arquivo, o conteúdo será colocado no campo abaixo para conferência antes de importar.</small>
+            </label>
+
+            <textarea id="jsonInput" rows="6" spellcheck="false" placeholder='{"items":[...]}'></textarea>
+            <div class="actions">
+              <button class="secondary" id="importJsonBtn" type="button">Importar</button>
+              <button class="danger" id="clearAllBtn" type="button">Apagar tudo</button>
+            </div>
+          </details>
+        </div>
+      </details>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Abra usando um servidor local, por exemplo: <code>python -m http.server</code>. Assim os arquivos JSON externos são carregados corretamente.</p>
+  </footer>
+
+  <template id="listItemTemplate">
+    <div class="dynamic-item">
+      <input />
+      <button class="danger small" type="button">Remover</button>
+    </div>
+  </template>
+
+
+  <template id="itemCardTemplate">
+    <tr class="item-table-row">
+      <td class="select-col"></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+  </template>
+
+  <script src="app.js?v=31"></script>
 </body>
 </html>

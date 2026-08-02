@@ -1,0 +1,304 @@
+[
+  {
+    "id": "potion_subtype",
+    "category": "potions",
+    "title": "Tipo de poção",
+    "role": "subtype",
+    "die": "—",
+    "rows": [
+      {
+        "roll": "—",
+        "value": "Poção"
+      }
+    ]
+  },
+  {
+    "id": "potion_characteristic",
+    "category": "potions",
+    "title": "Característica da poção",
+    "role": "characteristic",
+    "die": "d8",
+    "columns": [
+      "Característica 1",
+      "Característica 2",
+      "Característica 3"
+    ],
+    "rows": [
+      {
+        "roll": "1",
+        "values": [
+          "Picante",
+          "Aranha em conserva",
+          "Efervescente"
+        ]
+      },
+      {
+        "roll": "2",
+        "values": [
+          "Cristalina",
+          "Fumaça verde",
+          "Rajadas roxas"
+        ]
+      },
+      {
+        "roll": "3",
+        "values": [
+          "Azul-escuro",
+          "Pequenas estrelas e lua",
+          "Chamas na superfície"
+        ]
+      },
+      {
+        "roll": "4",
+        "values": [
+          "Aroma cítrico",
+          "Flocos dourados no líquido",
+          "Aroma floral"
+        ]
+      },
+      {
+        "roll": "5",
+        "values": [
+          "Sulfurosa",
+          "Vórtice giratório",
+          "Caveira na garrafa"
+        ]
+      },
+      {
+        "roll": "6",
+        "values": [
+          "Espumante",
+          "Assobio baixo",
+          "Morna"
+        ]
+      },
+      {
+        "roll": "7",
+        "values": [
+          "Refrescante",
+          "Treme e oscila",
+          "Grande molar dentro"
+        ]
+      },
+      {
+        "roll": "8",
+        "values": [
+          "Vermelho-sangue",
+          "Tem um olho dentro",
+          "Supernovas rosadas"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "potion_mixing",
+    "category": "potions",
+    "title": "Misturando poções",
+    "role": "misc",
+    "die": "d12",
+    "columns": [
+      "Efeito 1",
+      "Efeito 2"
+    ],
+    "rows": [
+      {
+        "roll": "1",
+        "values": [
+          "Quem bebe flutua por 2 rodadas",
+          "Fumaças: CON CD 12 ou 1d4 de dano"
+        ]
+      },
+      {
+        "roll": "2",
+        "values": [
+          "Ganha personalidade: 1 virtude",
+          "Perde todas as maldições"
+        ]
+      },
+      {
+        "roll": "3",
+        "values": [
+          "Torna-se totalmente inativa",
+          "Ganha personalidade: 1 defeito"
+        ]
+      },
+      {
+        "roll": "4",
+        "values": [
+          "Role de novo 2 novos benefícios",
+          "O usuário fica invisível por 2 rodadas"
+        ]
+      },
+      {
+        "roll": "5",
+        "values": [
+          "Maldições têm metade do efeito",
+          "Dobre os efeitos de um benefício"
+        ]
+      },
+      {
+        "roll": "6",
+        "values": [
+          "Ganha 1 maldição adicional",
+          "Explode: DES CD 12 ou 1d6 de dano"
+        ]
+      },
+      {
+        "roll": "7",
+        "values": [
+          "Quem bebe esquece 1 idioma",
+          "Ganha personalidade: 1 virtude"
+        ]
+      },
+      {
+        "roll": "8",
+        "values": [
+          "Ganha 1 benefício adicional",
+          "Benefícios têm metade do efeito"
+        ]
+      },
+      {
+        "roll": "9",
+        "values": [
+          "Ganha personalidade: 1 defeito",
+          "Dobra os efeitos de uma maldição"
+        ]
+      },
+      {
+        "roll": "10",
+        "values": [
+          "Todos os efeitos são invertidos",
+          "Usuário: CON CD 12 ou 1d8 de dano"
+        ]
+      },
+      {
+        "roll": "11",
+        "values": [
+          "Perde todos os benefícios",
+          "Usuário: -1 em um atributo aleatório"
+        ]
+      },
+      {
+        "roll": "12",
+        "values": [
+          "Usuário: +1 em um atributo aleatório",
+          "1 efeito aleatório se torna permanente"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "potion_benefit",
+    "category": "potions",
+    "title": "Benefício da poção",
+    "role": "benefit",
+    "die": "d12",
+    "rows": [
+      {
+        "roll": "1",
+        "value": "Imune por 5 rodadas, 1d4: 1 fogo, 2 frio, 3 eletricidade, 4 veneno"
+      },
+      {
+        "roll": "2",
+        "value": "Cura, 1d4: 1d4, 2d6, 3d8 ou 4d10"
+      },
+      {
+        "roll": "3",
+        "value": "Lê as mentes de todas as criaturas no alcance Perto por 1 hora"
+      },
+      {
+        "roll": "4",
+        "value": "Voa à distância Perto por 5 rodadas"
+      },
+      {
+        "roll": "5",
+        "value": "Por 5 rodadas, move-se até Longe em seu turno e ainda pode agir"
+      },
+      {
+        "roll": "6",
+        "value": "Torna-se invisível por 5 rodadas"
+      },
+      {
+        "roll": "7",
+        "value": "Respira debaixo d’água e sabe o idioma Merrano por 1 hora"
+      },
+      {
+        "roll": "8",
+        "value": "Um atributo se torna 18 (+4) por 5 rodadas"
+      },
+      {
+        "roll": "9",
+        "value": "Transforma-se em um gás roxo e voador por 5 rodadas"
+      },
+      {
+        "roll": "10",
+        "value": "Cura qualquer doença ou condição que esteja afetando quem beber"
+      },
+      {
+        "roll": "11",
+        "value": "Pode entender e falar com animais por 1 hora"
+      },
+      {
+        "roll": "12",
+        "value": "Você fica imune a todos os tipos de dano por 5 rodadas"
+      }
+    ]
+  },
+  {
+    "id": "potion_curse",
+    "category": "potions",
+    "title": "Maldição da poção",
+    "role": "curse",
+    "die": "d12",
+    "rows": [
+      {
+        "roll": "1",
+        "value": "SAB CD 15 ou ataca a criatura mais próxima por 3 rodadas"
+      },
+      {
+        "roll": "2",
+        "value": "Você se transforma em uma salamandra com 1 PV por 3 rodadas"
+      },
+      {
+        "roll": "3",
+        "value": "Um atributo se torna 3 (-4) por 1 hora"
+      },
+      {
+        "roll": "4",
+        "value": "CON CD 15 ou 2d10 de dano"
+      },
+      {
+        "roll": "5",
+        "value": "Você esquece todos os idiomas que conhece por 1 hora"
+      },
+      {
+        "roll": "6",
+        "value": "Encolhe até a metade de seu tamanho; DESV em ataques por 5 rodadas"
+      },
+      {
+        "roll": "7",
+        "value": "Você canta com todo o potencial de seus pulmões por 3 rodadas"
+      },
+      {
+        "roll": "8",
+        "value": "Você se torna magnético para todo tipo de metal Perto de você por 1 hora"
+      },
+      {
+        "roll": "9",
+        "value": "Você é compelido a pular em qualquer buraco que vê por 1 hora"
+      },
+      {
+        "roll": "10",
+        "value": "CON CD 15 ou fica cego por 5 rodadas"
+      },
+      {
+        "roll": "11",
+        "value": "Você é a origem de uma magia cúpula antimagia por 1 hora"
+      },
+      {
+        "roll": "12",
+        "value": "Dois membros se petrificam por 5 rodadas, 1d4: 1–2 braços, 3–4 pernas"
+      }
+    ]
+  }
+]

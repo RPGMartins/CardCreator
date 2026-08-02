@@ -1,0 +1,111 @@
+{
+  "weapon": [
+    {
+      "code": "Ac",
+      "name": "Acuidade",
+      "description": "Você pode usar FOR ou DES quando atacar com essa arma."
+    },
+    {
+      "code": "Ar",
+      "name": "Arremesso",
+      "description": "Você pode arremessar essa arma para realizar um ataque à distância, usando FOR ou DES."
+    },
+    {
+      "code": "2M",
+      "name": "Duas Mãos",
+      "description": "Você precisa usar essa arma com as duas mãos."
+    },
+    {
+      "code": "R",
+      "name": "Recarregável",
+      "description": "Você deve abrir mão do seu movimento para recarregar essa arma."
+    },
+    {
+      "code": "Ch",
+      "name": "Chicote",
+      "description": "Quando você faz um ataque à distância com essa arma, ela não escapa da sua mão."
+    },
+    {
+      "code": "V",
+      "name": "Versátil",
+      "description": "Você pode usar essa arma com uma ou com as duas mãos. Use o dado de dano mais alto se estiver usando as duas mãos."
+    },
+    {
+      "code": "Bo",
+      "name": "Boleadeira",
+      "description": "Quando você atinge uma criatura com pernas, e que seja do tamanho de um cavalo ou menor, a velocidade do alvo é reduzida para Adjacente até que ele se liberte (teste de FOR ou DES CD 15)."
+    },
+    {
+      "code": "Sh",
+      "name": "Shuriken",
+      "description": "Pode ser lançada contra o solo. Criaturas vivas que pisarem nela sofrem 1 de dano e só podem se mover com metade de sua velocidade por 10 rodadas."
+    },
+    {
+      "code": "Za",
+      "name": "Zarabatana",
+      "description": "Atirar com essa arma enquanto está escondido não revela sua posição."
+    },
+    {
+      "code": "2 espaços",
+      "name": "Ocupa 2 espaços",
+      "description": "O item ocupa 2 espaços no inventário."
+    },
+    {
+      "code": "Ru",
+      "name": "Ruptura",
+      "description": "Quando for atingido por um ataque corpo a corpo, você pode optar por destruir essa arma ou armadura para negar todo o dano do ataque."
+    },
+    {
+      "code": "Q",
+      "name": "Quebrável",
+      "description": "Esta arma quebra em um 1 natural na jogada de ataque."
+    },
+    {
+      "code": "Re",
+      "name": "Retornável",
+      "description": "Em um ataque à distância que erra, esta arma retorna ao arremessador."
+    },
+    {
+      "code": "Especial",
+      "name": "Especial",
+      "description": "Consulte as observações do item."
+    }
+  ],
+  "armor": [
+    {
+      "code": "DESV FN",
+      "name": "DESV em furtividade e natação",
+      "description": "Você tem DESV em testes de furtividade e natação."
+    },
+    {
+      "code": "DESV FNN",
+      "name": "DESV em furtividade, não pode nadar",
+      "description": "Você tem DESV em testes de furtividade e não pode nadar."
+    },
+    {
+      "code": "1 mão",
+      "name": "Ocupa uma mão",
+      "description": "Ocupa uma mão."
+    },
+    {
+      "code": "Ru",
+      "name": "Ruptura",
+      "description": "Quando for atingido por um ataque corpo a corpo, você pode optar por destruir essa arma ou armadura para negar todo o dano do ataque."
+    },
+    {
+      "code": "Barulhenta",
+      "name": "Barulhenta",
+      "description": "A armadura é difícil de esconder e pode atrapalhar furtividade, se fizer sentido na ficção."
+    },
+    {
+      "code": "Pesada",
+      "name": "Pesada",
+      "description": "A armadura ocupa mais espaço ou exige preparo especial, conforme a regra usada na mesa."
+    },
+    {
+      "code": "Especial",
+      "name": "Especial",
+      "description": "Consulte as observações do item."
+    }
+  ]
+}

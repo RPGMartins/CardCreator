@@ -1,0 +1,231 @@
+[
+  {
+    "id": "item_virtue",
+    "category": "personality",
+    "title": "Virtude do item",
+    "role": "virtue",
+    "die": "d20",
+    "rows": [
+      {
+        "roll": "1",
+        "value": "Insiste em proteger as pessoas e criaturas que ele gosta"
+      },
+      {
+        "roll": "2",
+        "value": "Avisa ao portador se pressentir algum perigo se aproximando"
+      },
+      {
+        "roll": "3",
+        "value": "Traduz o idioma Primordial de bom grado para seu portador"
+      },
+      {
+        "roll": "4",
+        "value": "Sente as criaturas escondidas por Perto, mas não sabe o lugar exato"
+      },
+      {
+        "roll": "5",
+        "value": "Tem um favor a receber de 1d4: 1–2 unicórnio, 3 dragão, 4 nobre"
+      },
+      {
+        "roll": "6",
+        "value": "Inspira respeito nos seguidores de um deus"
+      },
+      {
+        "roll": "7",
+        "value": "Ocasionalmente se lembra de histórias antigas e úteis"
+      },
+      {
+        "roll": "8",
+        "value": "Transmite sonhos agradáveis e um bom sono ao seu portador"
+      },
+      {
+        "roll": "9",
+        "value": "Orienta seu portador sobre as coisas certas a se dizer em certas situações"
+      },
+      {
+        "roll": "10",
+        "value": "Às vezes, oferece conselhos estratégicos e úteis"
+      },
+      {
+        "roll": "11",
+        "value": "Ocasionalmente, percebe detalhes importantes que os outros ignoraram"
+      },
+      {
+        "roll": "12",
+        "value": "Tenta intermediar discordâncias entre itens conscientes"
+      },
+      {
+        "roll": "13",
+        "value": "Presença calmante para 1d4: 1 cães, 2 cavalos, 3 gatos, 4 pássaros"
+      },
+      {
+        "roll": "14",
+        "value": "Tem um olfato extremamente aguçado"
+      },
+      {
+        "roll": "15",
+        "value": "Sabe a direção do corpo de água corrente mais próximo"
+      },
+      {
+        "roll": "16",
+        "value": "Ordeiro, intimida criaturas caóticas"
+      },
+      {
+        "roll": "17",
+        "value": "Neutro, intimida criaturas ordeiras e caóticas"
+      },
+      {
+        "roll": "18",
+        "value": "Caótico, intimida criaturas ordeiras"
+      },
+      {
+        "roll": "19",
+        "value": "Carrega profecias legítimas, mas não tem certeza do que significam"
+      },
+      {
+        "roll": "20",
+        "value": "Pode desfazer um(a) grande 1d4: 1 mal, 2 mentira, 3 magia, 4 aliança"
+      }
+    ]
+  },
+  {
+    "id": "item_flaw",
+    "category": "personality",
+    "title": "Defeito do item",
+    "role": "flaw",
+    "die": "d20",
+    "rows": [
+      {
+        "roll": "1",
+        "value": "Tem medo de 1d4: 1 escuro, 2 vermes, 3 altura, 4 água"
+      },
+      {
+        "roll": "2",
+        "value": "Preferia um portador anterior e sempre faz comparações"
+      },
+      {
+        "roll": "3",
+        "value": "Fala incessantemente enquanto o portador está tentando se concentrar"
+      },
+      {
+        "roll": "4",
+        "value": "Não gosta de 1d4: 1 elfos, 2 anões, 3 humanos, 4 goblins"
+      },
+      {
+        "roll": "5",
+        "value": "Tenta induzir o portador a lutar só para ter algo para fazer"
+      },
+      {
+        "roll": "6",
+        "value": "Não quer ser separado do portador por nenhum motivo"
+      },
+      {
+        "roll": "7",
+        "value": "Se opõe a 1d4: 1 apostas, 2 farra, 3 furtividade, 4 roubo"
+      },
+      {
+        "roll": "8",
+        "value": "Acusa todos de estarem mentindo; está certo de vez em quando"
+      },
+      {
+        "roll": "9",
+        "value": "Não causará dano às criaturas 1d4: 1–2 ordeiras, 3 neutras, 4 caóticas"
+      },
+      {
+        "roll": "10",
+        "value": "Acredita que seu portador é um fantoche em seu esquema apocalíptico"
+      },
+      {
+        "roll": "11",
+        "value": "Tenta escapar constantemente de seu portador atual"
+      },
+      {
+        "roll": "12",
+        "value": "Exige que seu portador obedeça aos rituais rígidos de seu deus"
+      },
+      {
+        "roll": "13",
+        "value": "Insiste em ser reunido com seu criador, vivo ou morto"
+      },
+      {
+        "roll": "14",
+        "value": "Não tolera outros itens mágicos conscientes"
+      },
+      {
+        "roll": "15",
+        "value": "Se recusa a ser usado para tarefas sem importância ou chatas"
+      },
+      {
+        "roll": "16",
+        "value": "Intencionalmente cessa sua magia quando está irritado com seu portador"
+      },
+      {
+        "roll": "17",
+        "value": "Insiste que precisa ser meticulosamente limpo todos os dias"
+      },
+      {
+        "roll": "18",
+        "value": "Ama a cor roxa e despreza todas as outras cores"
+      },
+      {
+        "roll": "19",
+        "value": "Se opõe a 1d4: 1 negociações, 2–3 lutas, 4 planejamentos"
+      },
+      {
+        "roll": "20",
+        "value": "Finge saber de informações que não conhece"
+      }
+    ]
+  },
+  {
+    "id": "item_personality_trait",
+    "category": "personality",
+    "title": "Traço de personalidade",
+    "role": "personality-trait",
+    "die": "d4, d4",
+    "columns": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "rows": [
+      {
+        "roll": "1",
+        "values": [
+          "Autoritário",
+          "Educado",
+          "Puritano",
+          "Encantador"
+        ]
+      },
+      {
+        "roll": "2",
+        "values": [
+          "Ansioso",
+          "Justo",
+          "Crítico",
+          "Dramático"
+        ]
+      },
+      {
+        "roll": "3",
+        "values": [
+          "Mandão",
+          "Nobre",
+          "Ganancioso",
+          "Protetor"
+        ]
+      },
+      {
+        "roll": "4",
+        "values": [
+          "Impulsivo",
+          "Corajoso",
+          "Cruel",
+          "Leal"
+        ]
+      }
+    ]
+  }
+]

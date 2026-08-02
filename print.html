@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+  <title>Shadowdark — Página de Impressão</title>
+  <link rel="stylesheet" href="styles.css?v=31" />
+  <link rel="stylesheet" href="card.css?v=31" />
+  <link rel="stylesheet" href="print.css?v=31" />
+</head>
+<body>
+  <header class="hero print-hero">
+    <div>
+      <p class="eyebrow">Shadowdark / OSR</p>
+      <h1>Página de Impressão</h1>
+      <p class="subtitle">Selecione várias cartas, gere frentes e versos em páginas separadas e imprima em lote.</p>
+    </div>
+  </header>
+
+  <main class="print-app">
+    <section class="panel tools-panel no-print">
+      <div class="tools-panel-text">
+        <p class="eyebrow">Ferramentas de impressão</p>
+        <h2>Navegação e lote</h2>
+      </div>
+      <div class="tools-panel-actions">
+        <button class="app-button secondary-button" type="button" onclick="window.location.href='index.html'">Voltar ao criador de itens</button>
+        <button class="app-button primary" type="button" onclick="window.location.href='card.html'">Abrir criador de cartas</button>
+        <button class="app-button primary" id="printBtn" type="button">Imprimir</button>
+      </div>
+    </section>
+
+    <section class="panel no-print print-controls">
+      <div class="control-grid">
+        <label>Tamanho impresso<select id="printSize"><option value="poker">Poker real — 63 × 88 mm / 9 por folha</option><option value="large">Grande — 70 × 98 mm / 6 por folha</option><option value="mini">Mini — 57 × 80 mm / 9 por folha</option><option value="tarot">Tarot — 70 × 120 mm / 4 por folha</option></select></label>
+        <label>Espaçamento<select id="printGap"><option value="2">Compacto — 2 mm</option><option value="3" selected>Corte fácil — 3 mm</option><option value="4">Corte confortável — 4 mm</option></select></label>
+        <label>Tema padrão<select id="theme"><option value="saved">Usar salvo por carta</option><option value="parchment">Pergaminho claro</option><option value="dark">Shadowdark escuro</option><option value="clean">Limpo</option></select></label>
+        <label>Modo<select id="printMode"><option value="both">Frentes + versos</option><option value="fronts">Só frentes</option><option value="backs">Só versos</option></select></label>
+        <label class="check inline-check"><input id="mirrorBacks" type="checkbox" checked /><span>Espelhar ordem dos versos para duplex</span></label>
+        <label class="check inline-check"><input id="showCutLines" type="checkbox" checked /><span>Mostrar linhas de corte</span></label>
+        <label class="check inline-check"><input id="autoFontFit" type="checkbox" checked /><span>Ajustar fonte automaticamente</span></label>
+      </div>
+      <p class="hint">Na impressão do navegador, use escala 100%, margens “nenhuma” ou “mínimas” e ative “gráficos de segundo plano”. Use espaçamento de 3 mm para corte fácil; 2 mm economiza espaço e 4 mm deixa o corte manual mais confortável.</p>
+    </section>
+
+    <section id="printRoot" class="print-root"></section>
+  </main>
+
+  <script src="card-renderer.js?v=31"></script>
+  <script src="print.js?v=31"></script>
+</body>
+</html>

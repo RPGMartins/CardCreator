@@ -1,0 +1,343 @@
+[
+  {
+    "id": "weapon_type",
+    "category": "weapons",
+    "title": "Tipo de arma",
+    "role": "subtype",
+    "die": "—",
+    "rows": [
+      {
+        "roll": "—",
+        "value": "Adaga"
+      },
+      {
+        "roll": "—",
+        "value": "Arco curto"
+      },
+      {
+        "roll": "—",
+        "value": "Arco longo"
+      },
+      {
+        "roll": "—",
+        "value": "Azagaia"
+      },
+      {
+        "roll": "—",
+        "value": "Besta"
+      },
+      {
+        "roll": "—",
+        "value": "Cajado"
+      },
+      {
+        "roll": "—",
+        "value": "Clava"
+      },
+      {
+        "roll": "—",
+        "value": "Espada curta"
+      },
+      {
+        "roll": "—",
+        "value": "Espada bastarda"
+      },
+      {
+        "roll": "—",
+        "value": "Espada grande"
+      },
+      {
+        "roll": "—",
+        "value": "Espada longa"
+      },
+      {
+        "roll": "—",
+        "value": "Lança"
+      },
+      {
+        "roll": "—",
+        "value": "Maça"
+      },
+      {
+        "roll": "—",
+        "value": "Machado grande"
+      },
+      {
+        "roll": "—",
+        "value": "Martelo de guerra"
+      },
+      {
+        "roll": "—",
+        "value": "Boleadeira"
+      },
+      {
+        "roll": "—",
+        "value": "Chicote"
+      },
+      {
+        "roll": "—",
+        "value": "Chicote de lâminas"
+      },
+      {
+        "roll": "—",
+        "value": "Cimitarra"
+      },
+      {
+        "roll": "—",
+        "value": "Funda"
+      },
+      {
+        "roll": "—",
+        "value": "Maça estrela"
+      },
+      {
+        "roll": "—",
+        "value": "Pique"
+      },
+      {
+        "roll": "—",
+        "value": "Shuriken"
+      },
+      {
+        "roll": "—",
+        "value": "Zarabatana"
+      },
+      {
+        "roll": "—",
+        "value": "Bastão"
+      },
+      {
+        "roll": "—",
+        "value": "Machadinha"
+      }
+    ]
+  },
+  {
+    "id": "weapon_characteristic",
+    "category": "weapons",
+    "title": "Característica da arma",
+    "role": "characteristic",
+    "die": "d20",
+    "rows": [
+      {
+        "roll": "1",
+        "value": "Rastros brilhantes"
+      },
+      {
+        "roll": "2",
+        "value": "Metal estelar"
+      },
+      {
+        "roll": "3",
+        "value": "Enferrujada e lascada"
+      },
+      {
+        "roll": "4",
+        "value": "Pedra preciosa no pomo/cabo"
+      },
+      {
+        "roll": "5",
+        "value": "Goteja ícor verde"
+      },
+      {
+        "roll": "6",
+        "value": "Prateada e com motivos de lua"
+      },
+      {
+        "roll": "7",
+        "value": "Galáxias rodopiam na superfície"
+      },
+      {
+        "roll": "8",
+        "value": "Feita de pau-ferro"
+      },
+      {
+        "roll": "9",
+        "value": "Inscrita com runas"
+      },
+      {
+        "roll": "10",
+        "value": "Aura fantasmagórica suave"
+      },
+      {
+        "roll": "11",
+        "value": "Incrustada com ouro"
+      },
+      {
+        "roll": "12",
+        "value": "Rastros de incenso"
+      },
+      {
+        "roll": "13",
+        "value": "Com pedras preciosas"
+      },
+      {
+        "roll": "14",
+        "value": "Faíscas dançam na superfície"
+      },
+      {
+        "roll": "15",
+        "value": "Com formato de um animal"
+      },
+      {
+        "roll": "16",
+        "value": "Esculpida em granito"
+      },
+      {
+        "roll": "17",
+        "value": "Feita de osso de dragão"
+      },
+      {
+        "roll": "18",
+        "value": "Sussurra em um idioma"
+      },
+      {
+        "roll": "19",
+        "value": "Goteja água do oceano"
+      },
+      {
+        "roll": "20",
+        "value": "Sangue vira pétalas de rosa"
+      }
+    ]
+  },
+  {
+    "id": "weapon_bonus",
+    "category": "weapons",
+    "title": "Bônus da arma",
+    "role": "bonus",
+    "die": "2d6",
+    "rows": [
+      {
+        "roll": "2–3",
+        "value": "+0"
+      },
+      {
+        "roll": "4–9",
+        "value": "+1"
+      },
+      {
+        "roll": "10–11",
+        "value": "+2"
+      },
+      {
+        "roll": "12",
+        "value": "+3"
+      }
+    ]
+  },
+  {
+    "id": "weapon_benefit",
+    "category": "weapons",
+    "title": "Benefício da arma",
+    "role": "benefit",
+    "die": "d12",
+    "rows": [
+      {
+        "roll": "1",
+        "value": "Corta ou esmaga qualquer tipo de material"
+      },
+      {
+        "roll": "2",
+        "value": "1/dia, se incendeia por 5 rodadas, causando 1d4 de dano extra"
+      },
+      {
+        "roll": "3",
+        "value": "CAR CD 15 para comandar um animal selvagem dentro do alcance Longe"
+      },
+      {
+        "roll": "4",
+        "value": "Decapita o inimigo em um acerto crítico"
+      },
+      {
+        "roll": "5",
+        "value": "Ao atingir uma criatura, aprenda seu Nome Verdadeiro"
+      },
+      {
+        "roll": "6",
+        "value": "Dispare um raio de energia com Destreza (Perto), 1d6 de dano"
+      },
+      {
+        "roll": "7",
+        "value": "Uma vez por dia, você desvia um ataque corpo a corpo que iria acertá-lo"
+      },
+      {
+        "roll": "8",
+        "value": "Quando mata uma criatura, recupera 1d6 PV"
+      },
+      {
+        "roll": "9",
+        "value": "Você tem Vantagem nas jogadas de iniciativa"
+      },
+      {
+        "roll": "10",
+        "value": "Possui a propriedade Arremesso, alcance Perto, retorna para você"
+      },
+      {
+        "roll": "11",
+        "value": "Causa o dobro de dano a 1d4: 1–2 mortos-vivos, 3 demônios, 4 dragões"
+      },
+      {
+        "roll": "12",
+        "value": "Role de novo 1 natural uma vez ao atacar com essa arma"
+      }
+    ]
+  },
+  {
+    "id": "weapon_curse",
+    "category": "weapons",
+    "title": "Maldição da arma",
+    "role": "curse",
+    "die": "d12",
+    "rows": [
+      {
+        "roll": "1",
+        "value": "Você não pode ver 1d4: 1 mortos-vivos, 2 demônios, 3 cobras, 4 aranhas"
+      },
+      {
+        "roll": "2",
+        "value": "Você é compelido a engolir todas as pedras preciosas impulsivamente"
+      },
+      {
+        "roll": "3",
+        "value": "Queime um boneco de palha diariamente, ou a arma perderá temporariamente sua magia"
+      },
+      {
+        "roll": "4",
+        "value": "Qualquer fonte de luz que você segura se apaga imediatamente"
+      },
+      {
+        "roll": "5",
+        "value": "Você deve orar a um deus em voz alta sempre que vir seu símbolo"
+      },
+      {
+        "roll": "6",
+        "value": "Criaturas venenosas sempre atacam você primeiro"
+      },
+      {
+        "roll": "7",
+        "value": "Você se transforma em um rato todos os dias à meia-noite por uma hora"
+      },
+      {
+        "roll": "8",
+        "value": "Seus testes para nadar sempre têm dificuldade Extrema (CD 18)"
+      },
+      {
+        "roll": "9",
+        "value": "Você se queima se tocar ouro"
+      },
+      {
+        "roll": "10",
+        "value": "Banhe a arma em sangue diariamente, ou ela perderá temporariamente sua magia"
+      },
+      {
+        "roll": "11",
+        "value": "Você não pode usar armadura enquanto empunhar essa arma"
+      },
+      {
+        "roll": "12",
+        "value": "A arma pode possuí-lo caso vença um teste disputado de Carisma (+2)"
+      }
+    ]
+  }
+]

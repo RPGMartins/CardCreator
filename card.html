@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+  <title>Shadowdark — Criador de Cartas</title>
+  <link rel="stylesheet" href="styles.css?v=31" />
+  <link rel="stylesheet" href="card.css?v=31" />
+</head>
+<body>
+  <header class="hero card-hero">
+    <div>
+      <p class="eyebrow">Shadowdark / OSR</p>
+      <h1>Criador de Cartas</h1>
+      <p class="subtitle">A frente fica reservada para regras e texto. A arte fica no verso para ganhar destaque e liberar espaço para itens verbosos.</p>
+    </div>
+    <div class="hero-card">
+      <span class="stat-label">Modelo</span>
+      <strong id="activeTemplate">Item</strong>
+      <span class="stat-label">Status</span>
+      <strong id="saveStatus">—</strong>
+    </div>
+  </header>
+
+  <main class="card-app">
+    <section class="panel tools-panel no-print">
+      <div class="tools-panel-text">
+        <p class="eyebrow">Ferramentas de cartas</p>
+        <h2>Navegação e impressão</h2>
+      </div>
+      <div class="tools-panel-actions">
+        <button class="app-button secondary-button" type="button" onclick="window.location.href='index.html'">Voltar ao criador de itens</button>
+        <button class="app-button primary" type="button" onclick="window.location.href='card.html'">Abrir criador de cartas</button>
+        <button class="app-button secondary-button" type="button" onclick="window.location.href='print.html'">Página de impressão</button>
+        <button class="app-button primary" id="printBtn" type="button">Imprimir carta atual</button>
+      </div>
+    </section>
+
+    <section class="card-layout">
+      <details class="panel collapsible card-controls" open>
+        <summary class="collapsible-summary">
+          <span><span class="eyebrow">Configuração</span><span class="summary-title">Carta do item</span></span>
+          <span class="chevron">▾</span>
+        </summary>
+
+        <div class="panel-body">
+          <section class="control-block">
+            <h2>Item</h2>
+            <label>Selecionar item salvo<select id="itemSelect"></select><small>Lê os itens criados no index.html.</small></label>
+            <div class="actions">
+              <button class="open-card-button" id="saveCardConfigBtn" type="button">Salvar configuração da carta</button>
+              <button class="ghost" id="resetCardConfigBtn" type="button">Limpar configuração salva</button>
+            </div>
+
+            <details class="import-box">
+              <summary>Importar JSON de itens</summary>
+              <label class="file-import">Selecionar arquivo .json<input id="jsonFileInput" type="file" accept="application/json,.json" /></label>
+              <textarea id="jsonInput" rows="5" spellcheck="false" placeholder='Cole aqui um JSON exportado pelo criador de itens'></textarea>
+              <div class="actions">
+                <button class="secondary" id="importJsonBtn" type="button">Importar JSON</button>
+                <button class="ghost" id="reloadLocalBtn" type="button">Recarregar itens locais</button>
+              </div>
+            </details>
+          </section>
+
+          <section class="control-block">
+            <h2>Verso / arte</h2>
+            <label>Imagem do verso<input id="imageInput" type="file" accept="image/*" /><small>A imagem é salva junto da configuração da carta no navegador.</small></label>
+            <label>Enquadramento<select id="artFit"><option value="contain">Mostrar inteira</option><option value="cover">Preencher verso</option></select></label>
+            <label class="check inline-check"><input id="showBackName" type="checkbox" /><span>Mostrar nome pequeno no verso</span></label>
+            <button class="ghost" id="clearImageBtn" type="button">Remover imagem</button>
+          </section>
+
+          <section class="control-block">
+            <h2>Aparência e impressão</h2>
+            <label>Tamanho da carta<select id="cardSize"><option value="poker">Poker / Magic aproximado</option><option value="tarot">Tarot vertical</option><option value="square">Quadrada</option></select></label>
+            <label>Tema<select id="theme"><option value="parchment">Pergaminho claro</option><option value="dark">Shadowdark escuro</option><option value="clean">Limpo para impressão</option></select></label>
+            <label>Densidade<select id="density"><option value="normal">Normal</option><option value="compact">Compacta</option><option value="large">Mais espaçada</option></select></label>
+            <label class="check inline-check"><input id="showDescriptions" type="checkbox" checked /><span>Mostrar descrições das propriedades</span></label>
+            <label class="check inline-check"><input id="showMeta" type="checkbox" checked /><span>Mostrar custo, espaços, alcance e tipo</span></label>
+          </section>
+
+          <section class="control-block">
+            <h2>Edição rápida</h2>
+            <label>Nome exibido<input id="overrideName" placeholder="Deixe vazio para usar o nome do item" /></label>
+            <label>Texto extra no rodapé da frente<textarea id="extraText" rows="4" placeholder="Texto manual para aparecer no final da carta"></textarea></label>
+          </section>
+        </div>
+      </details>
+
+      <section class="panel card-preview-panel">
+        <div class="panel-head no-print"><div><p class="eyebrow">Prévia</p><h2>Frente e verso</h2></div></div>
+        <div class="preview-stage">
+          <div class="card-preview-pair" id="cardPreview"></div>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <script src="card-renderer.js?v=31"></script>
+  <script src="card.js?v=31"></script>
+</body>
+</html>

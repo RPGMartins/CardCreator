@@ -1,0 +1,71 @@
+/* Criador e impressor de cartas — v6 */
+.card-hero h1 { font-size: clamp(2rem, 5.4vw, 4.4rem); }
+.card-app { width: min(1500px, calc(100% - 32px)); margin: 24px auto 42px; }
+.card-top-actions, .page-actions { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 18px; }
+.card-layout { display: grid; grid-template-columns: minmax(340px, 460px) minmax(420px, 1fr); gap: 22px; align-items: start; }
+.card-controls { position: sticky; top: 16px; }
+.control-block { border: 1px solid var(--line); border-radius: 14px; background: rgba(255,250,241,.68); padding: 14px; display: grid; gap: 12px; margin-bottom: 14px; }
+.control-block h2 { font-size: 1.05rem; }
+.inline-check { display: flex; align-items: center; gap: 8px; font-weight: 600; }
+.inline-check input { width: auto; }
+.file-import { margin: 12px 0; padding: 12px; border: 1px solid var(--line); border-radius: 12px; background: #fffaf1; }
+.file-import input[type="file"] { background: #fff; cursor: pointer; }
+.preview-stage { min-height: 760px; display: grid; place-items: start center; background: radial-gradient(circle at top, rgba(0,0,0,.08), transparent 28rem), rgba(255,250,241,.48); border: 1px solid var(--line); border-radius: 18px; padding: clamp(18px, 3vw, 34px); overflow: auto; }
+.card-preview-pair { display: flex; align-items: flex-start; justify-content: center; gap: 22px; flex-wrap: wrap; }
+.card-side-label { text-align: center; font: 900 .8rem Arial, Helvetica, sans-serif; text-transform: uppercase; letter-spacing: .1em; color: var(--muted); margin: 0 0 8px; }
+.card-side-wrap { display: grid; gap: 8px; justify-items: center; }
+.item-card { --card-w: 360px; --card-h: 504px; width: var(--card-w); height: var(--card-h); border-radius: 18px; color: #1d1913; background: linear-gradient(180deg, rgba(255,255,255,.34), rgba(255,255,255,0)), #efe4d0; border: 2px solid #121212; box-shadow: 0 22px 60px rgba(0,0,0,.35); overflow: hidden; font-family: Georgia, "Times New Roman", serif; position: relative; }
+.item-card::before { content: ""; position: absolute; inset: 8px; border: 1px solid rgba(0,0,0,.42); border-radius: 12px; pointer-events: none; z-index: 2; }
+.size-poker { --card-w: 360px; --card-h: 504px; }
+.size-tarot { --card-w: 390px; --card-h: 650px; }
+.size-square { --card-w: 460px; --card-h: 460px; }
+.theme-parchment { background: radial-gradient(circle at 20% 10%, rgba(255,255,255,.48), transparent 35%), linear-gradient(180deg, #f6ecd8, #e1d0b5); }
+.theme-dark { color: #f7efe1; background: radial-gradient(circle at 30% 10%, rgba(255,255,255,.08), transparent 30%), linear-gradient(180deg, #24201a, #111); border-color: #eee1c7; }
+.theme-clean { background: #fffdf8; color: #111; border-color: #111; box-shadow: none; }
+.card-front { display: grid; grid-template-rows: auto auto auto 1fr auto; }
+.card-title-block { padding: 18px 20px 10px; text-align: center; border-bottom: 2px solid currentColor; position: relative; z-index: 1; }
+.card-type { margin: 0 0 4px; font: 800 .68rem Arial, Helvetica, sans-serif; text-transform: uppercase; letter-spacing: .16em; opacity: .72; }
+.card-title-block h2 { margin: 0; font-size: 1.45rem; line-height: 1.05; letter-spacing: -.03em; }
+.card-statbar { display: flex; flex-wrap: wrap; gap: 6px; padding: 12px 18px 10px; justify-content: center; }
+.stat-chip { border: 1px solid currentColor; border-radius: 999px; padding: 4px 8px; font: 800 .72rem Arial, Helvetica, sans-serif; background: rgba(255,255,255,.25); }
+.card-properties { padding: 0 18px 10px; display: grid; gap: 6px; }
+.property-line { border-top: 1px solid rgba(0,0,0,.25); padding-top: 5px; font-size: .78rem; line-height: 1.25; }
+.theme-dark .property-line { border-top-color: rgba(255,255,255,.24); }
+.property-line strong { font-family: Arial, Helvetica, sans-serif; }
+.card-text { padding: 0 18px 16px; display: grid; gap: 8px; align-content: start; overflow: hidden; }
+.text-section { border-top: 1px solid rgba(0,0,0,.28); padding-top: 7px; }
+.theme-dark .text-section { border-top-color: rgba(255,255,255,.24); }
+.text-section h3 { margin: 0 0 4px; font: 900 .76rem Arial, Helvetica, sans-serif; letter-spacing: .08em; text-transform: uppercase; }
+.text-section ul { margin: 0; padding-left: 18px; line-height: 1.28; font-size: .82rem; }
+.text-section p { margin: 0; line-height: 1.32; font-size: .82rem; }
+.card-footer { border-top: 2px solid currentColor; padding: 9px 18px 14px; text-align: center; font: 800 .66rem Arial, Helvetica, sans-serif; text-transform: uppercase; letter-spacing: .1em; opacity: .75; }
+.card-back { display: grid; grid-template-rows: 1fr auto; padding: 12px; }
+.card-back-art { border-radius: 12px; border: 1.5px solid currentColor; overflow: hidden; display: grid; place-items: center; background: rgba(255,255,255,.28); }
+.card-back-art img { width: 100%; height: 100%; object-fit: contain; filter: contrast(1.05); }
+.card-back-art.cover img { object-fit: cover; }
+.back-placeholder { display: grid; gap: 8px; text-align: center; opacity: .68; }
+.back-placeholder span { font: 900 .86rem Arial, Helvetica, sans-serif; text-transform: uppercase; letter-spacing: .12em; }
+.back-placeholder small { font: 800 .7rem Arial, Helvetica, sans-serif; text-transform: uppercase; letter-spacing: .08em; }
+.back-name { padding: 10px 8px 2px; text-align: center; font: 900 .75rem Arial, Helvetica, sans-serif; text-transform: uppercase; letter-spacing: .08em; }
+.density-compact .card-title-block { padding-top: 14px; }
+.density-compact .card-title-block h2 { font-size: 1.25rem; }
+.density-compact .card-text, .density-compact .card-properties { gap: 4px; }
+.density-compact .text-section ul, .density-compact .text-section p, .density-compact .property-line { font-size: .72rem; }
+.density-large .card-title-block h2 { font-size: 1.62rem; }
+.density-large .text-section ul, .density-large .text-section p { font-size: .92rem; }
+@media (max-width: 980px) { .card-layout { grid-template-columns: 1fr; } .card-controls { position: static; } }
+@media print {
+  body { background: white !important; }
+  .hero, .card-controls, .card-top-actions, .page-actions, .panel-head, .footer, .no-print { display: none !important; }
+  .card-app, .card-layout, .card-preview-panel, .preview-stage { width: auto !important; margin: 0 !important; padding: 0 !important; display: block !important; background: white !important; border: 0 !important; box-shadow: none !important; }
+  .card-preview-pair { display: block !important; }
+  .card-side-wrap { break-after: page; page-break-after: always; }
+  .card-side-label { display: none; }
+  .item-card { margin: 0 auto; box-shadow: none !important; print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+}
+
+
+/* v13 — imagens padrão no verso */
+.card-back-art img {
+  background: #f6efe1;
+}

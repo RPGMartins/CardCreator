@@ -1,0 +1,14 @@
+{
+  "itemTypes": "data/item-types.json",
+  "properties": "data/properties.json",
+  "tables": [
+    "data/tables/random-magic-item.json",
+    "data/tables/weapons.json",
+    "data/tables/armor.json",
+    "data/tables/scrolls-wands.json",
+    "data/tables/potions.json",
+    "data/tables/equipment.json",
+    "data/tables/utility.json",
+    "data/tables/personality.json"
+  ]
+}

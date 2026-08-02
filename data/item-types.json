@@ -1,0 +1,93 @@
+[
+  {
+    "id": "weapons",
+    "label": "Armas",
+    "singular": "Arma",
+    "propertyGroup": "weapon",
+    "subtypeLabel": "Tipo de arma",
+    "supportsCost": true,
+    "supportsDamage": true,
+    "supportsRange": true,
+    "supportsBonus": true,
+    "supportsSpells": false,
+    "supportsArmorClass": false
+  },
+  {
+    "id": "armor",
+    "label": "Armaduras",
+    "singular": "Armadura",
+    "propertyGroup": "armor",
+    "subtypeLabel": "Tipo de armadura",
+    "supportsCost": true,
+    "supportsDamage": false,
+    "supportsRange": false,
+    "supportsBonus": true,
+    "supportsSpells": false,
+    "supportsArmorClass": true
+  },
+  {
+    "id": "equipment",
+    "label": "Equipamentos",
+    "singular": "Equipamento",
+    "propertyGroup": "",
+    "subtypeLabel": "Tipo de equipamento",
+    "supportsCost": true,
+    "supportsDamage": false,
+    "supportsRange": false,
+    "supportsBonus": false,
+    "supportsSpells": false,
+    "supportsArmorClass": false
+  },
+  {
+    "id": "scrolls",
+    "label": "Pergaminhos",
+    "singular": "Pergaminho",
+    "propertyGroup": "",
+    "subtypeLabel": "Tipo",
+    "supportsCost": true,
+    "supportsDamage": false,
+    "supportsRange": false,
+    "supportsBonus": false,
+    "supportsSpells": true,
+    "supportsArmorClass": false
+  },
+  {
+    "id": "wands",
+    "label": "Varinhas",
+    "singular": "Varinha",
+    "propertyGroup": "",
+    "subtypeLabel": "Tipo",
+    "supportsCost": true,
+    "supportsDamage": false,
+    "supportsRange": false,
+    "supportsBonus": false,
+    "supportsSpells": true,
+    "supportsArmorClass": false
+  },
+  {
+    "id": "potions",
+    "label": "Poções",
+    "singular": "Poção",
+    "propertyGroup": "",
+    "subtypeLabel": "Tipo de poção",
+    "supportsCost": true,
+    "supportsDamage": false,
+    "supportsRange": false,
+    "supportsBonus": false,
+    "supportsSpells": false,
+    "supportsArmorClass": false
+  },
+  {
+    "id": "utility",
+    "label": "Utilitários",
+    "singular": "Utilitário",
+    "propertyGroup": "",
+    "subtypeLabel": "Tipo de utilitário",
+    "supportsCost": true,
+    "supportsDamage": false,
+    "supportsRange": false,
+    "supportsBonus": false,
+    "supportsSpells": false,
+    "supportsArmorClass": false
+  }
+]

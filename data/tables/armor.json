@@ -1,0 +1,259 @@
+[
+  {
+    "id": "armor_type",
+    "category": "armor",
+    "title": "Tipo de armadura",
+    "role": "subtype",
+    "die": "—",
+    "rows": [
+      {
+        "roll": "—",
+        "value": "Armadura de couro"
+      },
+      {
+        "roll": "—",
+        "value": "Cota de malha"
+      },
+      {
+        "roll": "—",
+        "value": "Armadura de placas"
+      },
+      {
+        "roll": "—",
+        "value": "Escudo"
+      },
+      {
+        "roll": "—",
+        "value": "Escudo redondo"
+      }
+    ]
+  },
+  {
+    "id": "armor_bonus",
+    "category": "armor",
+    "title": "Bônus de armadura",
+    "role": "bonus",
+    "die": "2d6",
+    "rows": [
+      {
+        "roll": "2–5",
+        "value": "+0"
+      },
+      {
+        "roll": "6–8",
+        "value": "+1"
+      },
+      {
+        "roll": "9–11",
+        "value": "+2"
+      },
+      {
+        "roll": "12",
+        "value": "+3"
+      }
+    ]
+  },
+  {
+    "id": "armor_characteristic",
+    "category": "armor",
+    "title": "Característica da armadura",
+    "role": "characteristic",
+    "die": "d20",
+    "rows": [
+      {
+        "roll": "1",
+        "value": "Face demoníaca com chifres"
+      },
+      {
+        "roll": "2",
+        "value": "Motivos de folhas de carvalho"
+      },
+      {
+        "roll": "3",
+        "value": "Com dentes de tubarão"
+      },
+      {
+        "roll": "4",
+        "value": "Escamas de dragão"
+      },
+      {
+        "roll": "5",
+        "value": "Espinhos de osso ou metal"
+      },
+      {
+        "roll": "6",
+        "value": "Runas arcanas desvanecidas"
+      },
+      {
+        "roll": "7",
+        "value": "Revestida com casco de tartaruga"
+      },
+      {
+        "roll": "8",
+        "value": "Feita de quitina de escorpião"
+      },
+      {
+        "roll": "9",
+        "value": "Metal dourado/fios de ouro"
+      },
+      {
+        "roll": "10",
+        "value": "Chamuscada, com cheiro de queimado"
+      },
+      {
+        "roll": "11",
+        "value": "Escamas de peixe branco-pérola"
+      },
+      {
+        "roll": "12",
+        "value": "Escorre sangue"
+      },
+      {
+        "roll": "13",
+        "value": "Coberta de fungos"
+      },
+      {
+        "roll": "14",
+        "value": "Som distante do oceano"
+      },
+      {
+        "roll": "15",
+        "value": "Incrustada com cristais"
+      },
+      {
+        "roll": "16",
+        "value": "Coberta de símbolos sagrados"
+      },
+      {
+        "roll": "17",
+        "value": "Goteja seiva de árvore"
+      },
+      {
+        "roll": "18",
+        "value": "Bordas desfocadas e indistintas"
+      },
+      {
+        "roll": "19",
+        "value": "Grande olho felino dourado"
+      },
+      {
+        "roll": "20",
+        "value": "Coberta de gelo"
+      }
+    ]
+  },
+  {
+    "id": "armor_benefit",
+    "category": "armor",
+    "title": "Benefício da armadura",
+    "role": "benefit",
+    "die": "d12",
+    "rows": [
+      {
+        "roll": "1",
+        "value": "Uma vez por dia, desvia um ataque à distância que iria acertá-lo"
+      },
+      {
+        "roll": "2",
+        "value": "Testes para estabilizar você são Fáceis (CD 9)"
+      },
+      {
+        "roll": "3",
+        "value": "Você não pode ser derrubado no chão enquanto estiver consciente"
+      },
+      {
+        "roll": "4",
+        "value": "Criaturas não detectadas não têm Vantagem para atacá-lo"
+      },
+      {
+        "roll": "5",
+        "value": "Você conhece o idioma Diabólico e é imune a fogo, lava e magma"
+      },
+      {
+        "roll": "6",
+        "value": "Você é imune às maldições de um item à sua escolha"
+      },
+      {
+        "roll": "7",
+        "value": "1/dia, ganhe Vantagem em todos os ataques por 3 rodadas"
+      },
+      {
+        "roll": "8",
+        "value": "Você recebe um bônus de +4 em seu temporizador de morte"
+      },
+      {
+        "roll": "9",
+        "value": "Ganhe imunidade a um veneno após sofrer seus efeitos uma vez"
+      },
+      {
+        "roll": "10",
+        "value": "Você conhece o idioma Celestial; 1/dia, pode voar por 3 rodadas"
+      },
+      {
+        "roll": "11",
+        "value": "Considere acertos críticos contra você como acertos normais"
+      },
+      {
+        "roll": "12",
+        "value": "Ignore qualquer dano de 3 pontos ou menos causado a você"
+      }
+    ]
+  },
+  {
+    "id": "armor_curse",
+    "category": "armor",
+    "title": "Maldição da armadura",
+    "role": "curse",
+    "die": "d12",
+    "rows": [
+      {
+        "roll": "1",
+        "value": "Você sofre 2d10 de dano se remover essa armadura"
+      },
+      {
+        "roll": "2",
+        "value": "Seu grupo não pode adicionar bônus de Carisma em testes de reação"
+      },
+      {
+        "roll": "3",
+        "value": "Montarias o temem, e não permitirão que você as cavalgue"
+      },
+      {
+        "roll": "4",
+        "value": "SAB CD 15 na primeira rodada de combate ou ataque a criatura mais próxima"
+      },
+      {
+        "roll": "5",
+        "value": "Você sofre dano dobrado de armas contundentes"
+      },
+      {
+        "roll": "6",
+        "value": "A armadura ocupa 5 espaços de equipamento, é extremamente barulhenta e desajustada"
+      },
+      {
+        "roll": "7",
+        "value": "Ataques à distância têm Vantagem contra você"
+      },
+      {
+        "roll": "8",
+        "value": "Considere 1 natural em ataques contra você como um acerto crítico"
+      },
+      {
+        "roll": "9",
+        "value": "Magias benéficas têm CD 15 para atingir você"
+      },
+      {
+        "roll": "10",
+        "value": "Você tem Desvantagem em testes de Destreza"
+      },
+      {
+        "roll": "11",
+        "value": "Existe uma chance secreta de 1:6 de cada aliado PNJ trair você"
+      },
+      {
+        "roll": "12",
+        "value": "Você sofre dano dobrado de armas de prata"
+      }
+    ]
+  }
+]

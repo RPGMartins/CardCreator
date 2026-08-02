@@ -1,0 +1,475 @@
+[
+  {
+    "id": "scroll_subtype",
+    "category": "scrolls",
+    "title": "Tipo de pergaminho",
+    "role": "subtype",
+    "die": "—",
+    "rows": [
+      {
+        "roll": "—",
+        "value": "Pergaminho"
+      }
+    ]
+  },
+  {
+    "id": "wand_subtype",
+    "category": "wands",
+    "title": "Tipo de varinha",
+    "role": "subtype",
+    "die": "—",
+    "rows": [
+      {
+        "roll": "—",
+        "value": "Varinha"
+      }
+    ]
+  },
+  {
+    "id": "scroll_characteristic",
+    "category": "scrolls",
+    "title": "Característica do pergaminho",
+    "role": "characteristic",
+    "die": "d8",
+    "rows": [
+      {
+        "roll": "1",
+        "value": "Marcado a fogo em couro"
+      },
+      {
+        "roll": "2",
+        "value": "Gravado em folha de cobre"
+      },
+      {
+        "roll": "3",
+        "value": "Papiro desbotado"
+      },
+      {
+        "roll": "4",
+        "value": "Rolo de pergaminho manchado"
+      },
+      {
+        "roll": "5",
+        "value": "Entalhado em osso"
+      },
+      {
+        "roll": "6",
+        "value": "Cinzelado em placas de pedra"
+      },
+      {
+        "roll": "7",
+        "value": "Riscado em vidro"
+      },
+      {
+        "roll": "8",
+        "value": "Tatuado em pele de dragão"
+      }
+    ]
+  },
+  {
+    "id": "wand_characteristic",
+    "category": "wands",
+    "title": "Característica da varinha",
+    "role": "characteristic",
+    "die": "d8",
+    "rows": [
+      {
+        "roll": "1",
+        "value": "Esculpida em osso"
+      },
+      {
+        "roll": "2",
+        "value": "Olho piscando no cabo"
+      },
+      {
+        "roll": "3",
+        "value": "Metal estelar lustroso"
+      },
+      {
+        "roll": "4",
+        "value": "Madeira polida"
+      },
+      {
+        "roll": "5",
+        "value": "Obsidiana com pontas de marfim"
+      },
+      {
+        "roll": "6",
+        "value": "Faíscas elétricas"
+      },
+      {
+        "roll": "7",
+        "value": "Cristal irregular"
+      },
+      {
+        "roll": "8",
+        "value": "Feita de pequenas caveiras"
+      }
+    ]
+  },
+  {
+    "id": "scroll_wand_benefit_curse_source",
+    "category": "scrolls",
+    "alsoFor": [
+      "wands"
+    ],
+    "title": "Maldições/benefícios — use as tabelas de...",
+    "role": "reference",
+    "die": "2d6",
+    "rows": [
+      {
+        "roll": "2–6",
+        "value": "Armaduras"
+      },
+      {
+        "roll": "7",
+        "value": "Armas"
+      },
+      {
+        "roll": "8–9",
+        "value": "Poções"
+      },
+      {
+        "roll": "10–12",
+        "value": "Utilitários"
+      }
+    ]
+  },
+  {
+    "id": "spell_tier",
+    "category": "scrolls",
+    "alsoFor": [
+      "wands"
+    ],
+    "title": "Grau da magia",
+    "role": "spell-tier",
+    "die": "2d6",
+    "rows": [
+      {
+        "roll": "2–5",
+        "value": "Grau 1"
+      },
+      {
+        "roll": "6–7",
+        "value": "Grau 2"
+      },
+      {
+        "roll": "8–9",
+        "value": "Grau 3"
+      },
+      {
+        "roll": "10–11",
+        "value": "Grau 4"
+      },
+      {
+        "roll": "12",
+        "value": "Grau 5"
+      }
+    ]
+  },
+  {
+    "id": "spell_tier_1",
+    "category": "scrolls",
+    "alsoFor": [
+      "wands"
+    ],
+    "title": "Grau 1 — referência de magia",
+    "role": "spell-reference",
+    "tier": "Grau 1",
+    "die": "d12",
+    "rows": [
+      {
+        "roll": "1",
+        "value": "Alarme"
+      },
+      {
+        "roll": "2",
+        "value": "Armadura arcana"
+      },
+      {
+        "roll": "3",
+        "value": "Detectar magia"
+      },
+      {
+        "roll": "4",
+        "value": "Disco flutuante"
+      },
+      {
+        "roll": "5",
+        "value": "Encantar pessoa"
+      },
+      {
+        "roll": "6",
+        "value": "Luz"
+      },
+      {
+        "roll": "7",
+        "value": "Mãos flamejantes"
+      },
+      {
+        "roll": "8",
+        "value": "Míssil mágico"
+      },
+      {
+        "roll": "9",
+        "value": "Obstruir porta"
+      },
+      {
+        "roll": "10",
+        "value": "Proteção contra o mal"
+      },
+      {
+        "roll": "11",
+        "value": "Queda suave"
+      },
+      {
+        "roll": "12",
+        "value": "Sono"
+      }
+    ]
+  },
+  {
+    "id": "spell_tier_2",
+    "category": "scrolls",
+    "alsoFor": [
+      "wands"
+    ],
+    "title": "Grau 2 — referência de magia",
+    "role": "spell-reference",
+    "tier": "Grau 2",
+    "die": "d12",
+    "rows": [
+      {
+        "roll": "1",
+        "value": "Alterar-se"
+      },
+      {
+        "roll": "2",
+        "value": "Arrombar"
+      },
+      {
+        "roll": "3",
+        "value": "Detectar pensamentos"
+      },
+      {
+        "roll": "4",
+        "value": "Flecha ácida"
+      },
+      {
+        "roll": "5",
+        "value": "Imobilizar pessoa"
+      },
+      {
+        "roll": "6",
+        "value": "Invisibilidade"
+      },
+      {
+        "roll": "7",
+        "value": "Levitação"
+      },
+      {
+        "roll": "8",
+        "value": "Objeto fixo"
+      },
+      {
+        "roll": "9",
+        "value": "Passo nebuloso"
+      },
+      {
+        "roll": "10",
+        "value": "Reflexos"
+      },
+      {
+        "roll": "11",
+        "value": "Silêncio"
+      },
+      {
+        "roll": "12",
+        "value": "Teia"
+      }
+    ]
+  },
+  {
+    "id": "spell_tier_3",
+    "category": "scrolls",
+    "alsoFor": [
+      "wands"
+    ],
+    "title": "Grau 3 — referência de magia",
+    "role": "spell-reference",
+    "tier": "Grau 3",
+    "die": "d12",
+    "rows": [
+      {
+        "roll": "1",
+        "value": "Animar mortos"
+      },
+      {
+        "roll": "2",
+        "value": "Bola de fogo"
+      },
+      {
+        "roll": "3",
+        "value": "Círculo mágico"
+      },
+      {
+        "roll": "4",
+        "value": "Dissipar magia"
+      },
+      {
+        "roll": "5",
+        "value": "Fabricar"
+      },
+      {
+        "roll": "6",
+        "value": "Falar com mortos"
+      },
+      {
+        "roll": "7",
+        "value": "Forma gasosa"
+      },
+      {
+        "roll": "8",
+        "value": "Ilusão"
+      },
+      {
+        "roll": "9",
+        "value": "Proteção contra energia"
+      },
+      {
+        "roll": "10",
+        "value": "Relâmpago"
+      },
+      {
+        "roll": "11",
+        "value": "Remeter"
+      },
+      {
+        "roll": "12",
+        "value": "Voar"
+      }
+    ]
+  },
+  {
+    "id": "spell_tier_4",
+    "category": "scrolls",
+    "alsoFor": [
+      "wands"
+    ],
+    "title": "Grau 4 — referência de magia",
+    "role": "spell-reference",
+    "tier": "Grau 4",
+    "die": "d12",
+    "rows": [
+      {
+        "roll": "1",
+        "value": "Confusão"
+      },
+      {
+        "roll": "2",
+        "value": "Controlar água"
+      },
+      {
+        "roll": "3",
+        "value": "Criar passagem"
+      },
+      {
+        "roll": "4",
+        "value": "Esfera resiliente"
+      },
+      {
+        "roll": "5",
+        "value": "Muralha de energia"
+      },
+      {
+        "roll": "6",
+        "value": "Névoa mortal"
+      },
+      {
+        "roll": "7",
+        "value": "Olho arcano"
+      },
+      {
+        "roll": "8",
+        "value": "Pele-rocha"
+      },
+      {
+        "roll": "9",
+        "value": "Polimorfia"
+      },
+      {
+        "roll": "10",
+        "value": "Porta dimensional"
+      },
+      {
+        "roll": "11",
+        "value": "Presságio"
+      },
+      {
+        "roll": "12",
+        "value": "Telecinese"
+      }
+    ]
+  },
+  {
+    "id": "spell_tier_5",
+    "category": "scrolls",
+    "alsoFor": [
+      "wands"
+    ],
+    "title": "Grau 5 — referência de magia",
+    "role": "spell-reference",
+    "tier": "Grau 5",
+    "die": "d12",
+    "rows": [
+      {
+        "roll": "1",
+        "value": "Criar morto-vivo"
+      },
+      {
+        "roll": "2",
+        "value": "Cúpula antimagia"
+      },
+      {
+        "roll": "3",
+        "value": "Desejo"
+      },
+      {
+        "roll": "4",
+        "value": "Desintegrar"
+      },
+      {
+        "roll": "5",
+        "value": "Imobilizar monstro"
+      },
+      {
+        "roll": "6",
+        "value": "Invocar extraplanar"
+      },
+      {
+        "roll": "7",
+        "value": "Metamorfose"
+      },
+      {
+        "roll": "8",
+        "value": "Orbe prismático"
+      },
+      {
+        "roll": "9",
+        "value": "Palavra de poder: matar"
+      },
+      {
+        "roll": "10",
+        "value": "Teleporte"
+      },
+      {
+        "roll": "11",
+        "value": "Transição planar"
+      },
+      {
+        "roll": "12",
+        "value": "Vidência"
+      }
+    ]
+  }
+]

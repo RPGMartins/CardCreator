@@ -1,0 +1,294 @@
+[
+  {
+    "id": "utility_type",
+    "category": "utility",
+    "title": "Tipo de utilitário",
+    "role": "subtype",
+    "die": "d20",
+    "rows": [
+      {
+        "roll": "1",
+        "value": "Broche"
+      },
+      {
+        "roll": "2",
+        "value": "Anel"
+      },
+      {
+        "roll": "3",
+        "value": "Botas"
+      },
+      {
+        "roll": "4",
+        "value": "Manto"
+      },
+      {
+        "roll": "5",
+        "value": "Amuleto"
+      },
+      {
+        "roll": "6",
+        "value": "Frasco"
+      },
+      {
+        "roll": "7",
+        "value": "Tomo"
+      },
+      {
+        "roll": "8",
+        "value": "Diadema"
+      },
+      {
+        "roll": "9",
+        "value": "Tapa-olho"
+      },
+      {
+        "roll": "10",
+        "value": "Manoplas"
+      },
+      {
+        "roll": "11",
+        "value": "Símbolo sagrado"
+      },
+      {
+        "roll": "12",
+        "value": "Chapéu"
+      },
+      {
+        "roll": "13",
+        "value": "Cálice"
+      },
+      {
+        "roll": "14",
+        "value": "Elmo"
+      },
+      {
+        "roll": "15",
+        "value": "Estatueta"
+      },
+      {
+        "roll": "16",
+        "value": "Óculos"
+      },
+      {
+        "roll": "17",
+        "value": "Bolsa"
+      },
+      {
+        "roll": "18",
+        "value": "Pedra"
+      },
+      {
+        "roll": "19",
+        "value": "Tabardo"
+      },
+      {
+        "roll": "20",
+        "value": "Máscara"
+      }
+    ]
+  },
+  {
+    "id": "utility_characteristic",
+    "category": "utility",
+    "title": "Característica do utilitário",
+    "role": "characteristic",
+    "die": "d20",
+    "rows": [
+      {
+        "roll": "1",
+        "value": "Com formato de um corvo"
+      },
+      {
+        "roll": "2",
+        "value": "Iridiscente"
+      },
+      {
+        "roll": "3",
+        "value": "Espinhos e farpas afiadas"
+      },
+      {
+        "roll": "4",
+        "value": "Feito de um grande sapo"
+      },
+      {
+        "roll": "5",
+        "value": "Cravejado de pedras preciosas"
+      },
+      {
+        "roll": "6",
+        "value": "Fios/detalhes em ouro"
+      },
+      {
+        "roll": "7",
+        "value": "Feito de couro de basilisco"
+      },
+      {
+        "roll": "8",
+        "value": "Possuído por um espírito"
+      },
+      {
+        "roll": "9",
+        "value": "Feito de fumaça moldada"
+      },
+      {
+        "roll": "10",
+        "value": "Coberto de pequenos espinhos"
+      },
+      {
+        "roll": "11",
+        "value": "Feito com penas raras"
+      },
+      {
+        "roll": "12",
+        "value": "Possui pequenas asas"
+      },
+      {
+        "roll": "13",
+        "value": "Muda de cor lentamente"
+      },
+      {
+        "roll": "14",
+        "value": "Com formato de um morcego"
+      },
+      {
+        "roll": "15",
+        "value": "Detalhes em prata envelhecida"
+      },
+      {
+        "roll": "16",
+        "value": "Feito de teia de aranha"
+      },
+      {
+        "roll": "17",
+        "value": "Zumbidos suaves e doces"
+      },
+      {
+        "roll": "18",
+        "value": "Dor aguda no primeiro toque"
+      },
+      {
+        "roll": "19",
+        "value": "Pulsa como um coração"
+      },
+      {
+        "roll": "20",
+        "value": "Deixa um suave rastro de névoa"
+      }
+    ]
+  },
+  {
+    "id": "utility_benefit",
+    "category": "utility",
+    "title": "Benefício do utilitário",
+    "role": "benefit",
+    "die": "d12",
+    "rows": [
+      {
+        "roll": "1",
+        "value": "Você não pode ser magicamente escrutado ou detectado"
+      },
+      {
+        "roll": "2",
+        "value": "Ligado a um bolsão interdimensional com 5 espaços de equipamento"
+      },
+      {
+        "roll": "3",
+        "value": "Um atributo se torna 18 (+4) ao usar/vestir o item"
+      },
+      {
+        "roll": "4",
+        "value": "1/dia, pode se teleportar para Perto"
+      },
+      {
+        "roll": "5",
+        "value": "Magias hostis que tenham você como alvo são conjuradas com CD 15"
+      },
+      {
+        "roll": "6",
+        "value": "Você é imune a 1d4: 1 fogo, 2 frio, 3 eletricidade, 4 veneno"
+      },
+      {
+        "roll": "7",
+        "value": "Sente portas secretas quando elas estão Adjacentes"
+      },
+      {
+        "roll": "8",
+        "value": "Você pode ver criaturas invisíveis e incorpóreas"
+      },
+      {
+        "roll": "9",
+        "value": "Nenhum tipo de terreno atrapalha seu movimento"
+      },
+      {
+        "roll": "10",
+        "value": "Você pode prender a respiração por 1 hora"
+      },
+      {
+        "roll": "11",
+        "value": "Você não precisa comer ou beber para sobreviver"
+      },
+      {
+        "roll": "12",
+        "value": "Você pode andar em superfícies não sólidas, 2 rodadas por vez"
+      }
+    ]
+  },
+  {
+    "id": "utility_curse",
+    "category": "utility",
+    "title": "Maldição do utilitário",
+    "role": "curse",
+    "die": "d12",
+    "rows": [
+      {
+        "roll": "1",
+        "value": "Apodrece lentamente todos os itens não mágicos que o tocarem"
+      },
+      {
+        "roll": "2",
+        "value": "Causa 1d4 de dano e deixa bolhas na pele sempre que for usado"
+      },
+      {
+        "roll": "3",
+        "value": "O item atrai um clima ruim para sua localização"
+      },
+      {
+        "roll": "4",
+        "value": "Você não pode ser curado por magia, apenas por descanso"
+      },
+      {
+        "roll": "5",
+        "value": "Ressoa como um gongo sempre que o portador mata uma criatura"
+      },
+      {
+        "roll": "6",
+        "value": "O item atrai todos os mortos-vivos dentro do alcance Longe"
+      },
+      {
+        "roll": "7",
+        "value": "A magia é perdida temporariamente se for imerso em água"
+      },
+      {
+        "roll": "8",
+        "value": "Você tem Desvantagem em testes de Constituição"
+      },
+      {
+        "roll": "9",
+        "value": "Você é impelido a incendiar pergaminhos e objetos semelhantes"
+      },
+      {
+        "roll": "10",
+        "value": "Você deve beber sangue uma vez por dia, ou sofrerá 1d8 de dano"
+      },
+      {
+        "roll": "11",
+        "value": "O item deve comer 1d10 PO ao dia, ou perde sua magia até que o faça"
+      },
+      {
+        "roll": "12",
+        "value": "O odor terrível do item torna Difíceis seus testes de Carisma"
+      }
+    ]
+  }
+]

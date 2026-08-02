@@ -1,0 +1,131 @@
+[
+  {
+    "id": "equipment_type",
+    "category": "equipment",
+    "title": "Tipo de equipamento",
+    "role": "subtype",
+    "die": "—",
+    "rows": [
+      {
+        "roll": "—",
+        "value": "Arpéu"
+      },
+      {
+        "roll": "—",
+        "value": "Corda (18 m)"
+      },
+      {
+        "roll": "—",
+        "value": "Cravos de ferro (10)"
+      },
+      {
+        "roll": "—",
+        "value": "Espelho"
+      },
+      {
+        "roll": "—",
+        "value": "Estrepes (um saco)"
+      },
+      {
+        "roll": "—",
+        "value": "Flechas (20)"
+      },
+      {
+        "roll": "—",
+        "value": "Frasco ou garrafa"
+      },
+      {
+        "roll": "—",
+        "value": "Gema"
+      },
+      {
+        "roll": "—",
+        "value": "Lampião"
+      },
+      {
+        "roll": "—",
+        "value": "Mochila"
+      },
+      {
+        "roll": "—",
+        "value": "Moeda"
+      },
+      {
+        "roll": "—",
+        "value": "Óleo (frasco)"
+      },
+      {
+        "roll": "—",
+        "value": "Pé de cabra"
+      },
+      {
+        "roll": "—",
+        "value": "Pederneira"
+      },
+      {
+        "roll": "—",
+        "value": "Rações (3)"
+      },
+      {
+        "roll": "—",
+        "value": "Tocha"
+      },
+      {
+        "roll": "—",
+        "value": "Vara"
+      },
+      {
+        "roll": "—",
+        "value": "Virotes de besta (20)"
+      },
+      {
+        "roll": "—",
+        "value": "Esferas de metal"
+      },
+      {
+        "roll": "—",
+        "value": "Vela (3)"
+      },
+      {
+        "roll": "—",
+        "value": "Carvão (frasco)"
+      },
+      {
+        "roll": "—",
+        "value": "Semente relâmpago"
+      },
+      {
+        "roll": "—",
+        "value": "Pasta luminosa (frasco)"
+      },
+      {
+        "roll": "—",
+        "value": "Água benta (frasco)"
+      },
+      {
+        "roll": "—",
+        "value": "Gancho de lampião"
+      },
+      {
+        "roll": "—",
+        "value": "Massa de mineiro (frasco)"
+      },
+      {
+        "roll": "—",
+        "value": "Rede"
+      },
+      {
+        "roll": "—",
+        "value": "Corda de seda morzo"
+      },
+      {
+        "roll": "—",
+        "value": "Sebo (frasco)"
+      },
+      {
+        "roll": "—",
+        "value": "Lampião de viajante"
+      }
+    ]
+  }
+]
